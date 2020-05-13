@@ -1,22 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int factorial(int);
-int main(){
-  int n;
-  printf("Ingrese un numero entre (0-12) para calcular su factorial\n");
-  scanf("%i", &n);
-    if(n > 12){
-      printf("No se puede calcular factorial de %i = 0 \n",n );
+long long int factorial(long long int);
+long long int main(){
+  long long int n;
+  printf("Ingrese un numero entre (0-20) para calcular su factorial\n");
+  scanf("%lli", &n);
+    if(n > 20){
+      printf("No se puede calcular factorial de %lli = 0 \n",n );
       return 0;
     }else{
-      //int aux = factorial(n);
-      printf("El factorial es:%i ",factorial(n));
+      printf("El factorial es:%lli ",factorial(n));
     }
     return 0;
 }
 
-int factorial(int n){
+long long int factorial( long long int n){
   if(n > 0){
     return (n*factorial(n-1));
   }
@@ -26,8 +25,8 @@ int factorial(int n){
 }
 /*Ejemplo
 
-/*int factorial(int n){
-  int aux = 1;
+/*long long int factorial( long long int n){
+  long long int aux = 1;
     while(n > 1){
       aux = aux*n;
       n--;
